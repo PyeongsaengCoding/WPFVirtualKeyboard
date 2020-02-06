@@ -1,0 +1,196 @@
+﻿<control:VirtualKeyboard x:Class="WPFVirtualKeyboard.VirtualKeyboardUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFVirtualKeyboard"
+        xmlns:control="clr-namespace:WPFVirtualKeyboard.Control"
+        mc:Ignorable="d">
+    <control:VirtualKeyboard.Resources>
+        <!--Key 클래스는 Button을 상속받고있음-->
+        <Style TargetType="{x:Type control:Key}">
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="Background" Value="#F1685E"/>
+            <Setter Property="Foreground" Value="#FFFFFF"></Setter>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="0.00000000001"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type control:Key}">
+                        <Border x:Name="border" SnapsToDevicePixels="True" Background="#F1685E" CornerRadius="3" Margin="1" Padding="1,0">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <!--<ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FF818181"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>-->
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </control:VirtualKeyboard.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <!--#region Grid.Row=0 Content-->
+            <control:Key KeyCode="OEM_3" Grid.Column="0"/>
+            <control:Key KeyCode="VK_1" Grid.Column="1"/>
+            <control:Key KeyCode="VK_2" Grid.Column="2"/>
+            <control:Key KeyCode="VK_3" Grid.Column="3"/>
+            <control:Key KeyCode="VK_4" Grid.Column="4"/>
+            <control:Key KeyCode="VK_5" Grid.Column="5"/>
+            <control:Key KeyCode="VK_6" Grid.Column="6"/>
+            <control:Key KeyCode="VK_7" Grid.Column="7"/>
+            <control:Key KeyCode="VK_8" Grid.Column="8"/>
+            <control:Key KeyCode="VK_9" Grid.Column="9"/>
+            <control:Key KeyCode="VK_0" Grid.Column="10"/>
+            <control:Key KeyCode="OEM_MINUS" Grid.Column="11"/>
+            <control:Key KeyCode="OEM_PLUS" Grid.Column="12"/>
+            <control:Key KeyCode="BACK" Grid.Column="13" FontSize="11"/>
+            <!--#endregion-->
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="1.8*"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="1.8*"/>
+            </Grid.ColumnDefinitions>
+            <!--#region Grid.row=1 Content-->
+            <control:Key KeyCode="TAB" Grid.Column="0" FontSize="18"/>
+            <control:Key KeyCode="VK_Q" Grid.Column="1"/>
+            <control:Key KeyCode="VK_W" Grid.Column="2"/>
+            <control:Key KeyCode="VK_E" Grid.Column="3"/>
+            <control:Key KeyCode="VK_R" Grid.Column="4"/>
+            <control:Key KeyCode="VK_T" Grid.Column="5"/>
+            <control:Key KeyCode="VK_Y" Grid.Column="6"/>
+            <control:Key KeyCode="VK_U" Grid.Column="7"/>
+            <control:Key KeyCode="VK_I" Grid.Column="8"/>
+            <control:Key KeyCode="VK_O" Grid.Column="9"/>
+            <control:Key KeyCode="VK_P" Grid.Column="10"/>
+            <control:Key KeyCode="OEM_4" Grid.Column="11"/>
+            <control:Key KeyCode="OEM_6" Grid.Column="12"/>
+            <control:Key KeyCode="OEM_5" Grid.Column="13" FontSize="18"/>
+            <!--#endregion-->
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <!--#region Grid.row=2 Content-->
+            <control:Key KeyCode="CAPITAL" Grid.Column="0" FontSize="12"/>
+            <control:Key KeyCode="VK_A" Grid.Column="1"/>
+            <control:Key KeyCode="VK_S" Grid.Column="2"/>
+            <control:Key KeyCode="VK_D" Grid.Column="3"/>
+            <control:Key KeyCode="VK_F" Grid.Column="4"/>
+            <control:Key KeyCode="VK_G" Grid.Column="5"/>
+            <control:Key KeyCode="VK_H" Grid.Column="6"/>
+            <control:Key KeyCode="VK_J" Grid.Column="7"/>
+            <control:Key KeyCode="VK_K" Grid.Column="8"/>
+            <control:Key KeyCode="VK_L" Grid.Column="9"/>
+            <control:Key KeyCode="OEM_1" Grid.Column="10"/>
+            <control:Key KeyCode="OEM_7" Grid.Column="11"/>
+            <control:Key KeyCode="RETURN" Grid.Column="12"  FontSize="15"/>
+            <!--#endregion-->
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="2.2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2.2*"/>
+            </Grid.ColumnDefinitions>
+            <!--#region Grid.Row=3 Content-->
+            <control:Key KeyCode="SHIFT" Grid.Column="0"  FontSize="13"/>
+            <control:Key KeyCode="VK_Z" Grid.Column="1"/>
+            <control:Key KeyCode="VK_X" Grid.Column="2"/>
+            <control:Key KeyCode="VK_C" Grid.Column="3"/>
+            <control:Key KeyCode="VK_V" Grid.Column="4"/>
+            <control:Key KeyCode="VK_B" Grid.Column="5"/>
+            <control:Key KeyCode="VK_N" Grid.Column="6"/>
+            <control:Key KeyCode="VK_M" Grid.Column="7"/>
+            <control:Key KeyCode="OEM_COMMA" Grid.Column="8"/>
+            <control:Key KeyCode="OEM_PERIOD" Grid.Column="9"/>
+            <control:Key KeyCode="OEM_2" Grid.Column="10"/>
+            <control:Key KeyCode="SHIFT" Grid.Column="11" FontSize="13"/>
+            <!--#endregion-->
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <control:Key KeyCode="SPACE" Grid.Column="0"></control:Key>
+            <control:Key KeyCode="HANGEUL" Grid.Column="1"></control:Key>
+        </Grid>
+    </Grid>
+</control:VirtualKeyboard>

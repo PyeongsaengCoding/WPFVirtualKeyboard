@@ -4,9 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFVirtualKeyboard"
+        xmlns:keyboard="clr-namespace:WPFVirtualKeyboard"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hangul Keyboard" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" x:Name="tbInput" AcceptsTab="True"/>
+        <keyboard:VirtualKeyboardUI Grid.Row="1" x:Name="generalKeyboard" IsShow="True"/>
+
     </Grid>
 </Window>

@@ -23,6 +23,11 @@ namespace WPFVirtualKeyboard
         public MainWindow()
         {
             InitializeComponent();
+
+            //tbInput.AcceptsReturn = true;
+            //tbInput.Focus();
+
+            //generalKeyboard.IsEnableHook = true;
         }
     }
 }
