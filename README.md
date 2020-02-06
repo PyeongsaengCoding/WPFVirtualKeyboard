@@ -10,4 +10,4 @@
 
 Remove InputSimulator from Nuget and reinstall it
 
-[I made using this Source](https://github.com/daeyeol/wpf-virtual-keyboard){: target="_blank"}
+[I made using this Source](https://github.com/daeyeol/wpf-virtual-keyboard)
