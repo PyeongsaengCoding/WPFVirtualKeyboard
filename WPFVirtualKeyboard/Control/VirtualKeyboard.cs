@@ -364,7 +364,6 @@ namespace WPFVirtualKeyboard.Control
                 Hook.UseGlobal = UseGlobal;
                 Hook.Start();
             }
-            Send(System.Windows.Input.Key.HangulMode);
             Application.Current.MainWindow.Closed += (s, args) => Hook.Stop();
         }
 
@@ -376,6 +375,8 @@ namespace WPFVirtualKeyboard.Control
 
         private void KeyboardUserControl_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
+            IsPressedHangul = true; //To Hangul array Content
+
             if ((bool)e.NewValue)
             {
                 if (IsEnableHook)
@@ -384,32 +385,11 @@ namespace WPFVirtualKeyboard.Control
                     IsPressedCapsLock = Simulator.Input.InputDeviceState.IsTogglingKeyInEffect(VirtualKeyCode.CAPITAL);
                     UpdateHookData();
                 }
-                Send(System.Windows.Input.Key.HangulMode);
                 UpdateKeys();
             }
         }
 
         #endregion
-
-        public static void Send(System.Windows.Input.Key key)
-        {
-            if (Keyboard.PrimaryDevice != null)
-            {
-                if (Keyboard.PrimaryDevice.ActiveSource != null)
-                {
-                    var e = new KeyEventArgs(Keyboard.PrimaryDevice, Keyboard.PrimaryDevice.ActiveSource, 0, key)
-                    {
-                        RoutedEvent = Keyboard.KeyDownEvent
-                    };
-                    InputManager.Current.ProcessInput(e);
-
-                    // Note: Based on your requirements you may also need to fire events for:
-                    // RoutedEvent = Keyboard.PreviewKeyDownEvent
-                    // RoutedEvent = Keyboard.KeyUpEvent
-                    // RoutedEvent = Keyboard.PreviewKeyUpEvent
-                }
-            }
-        }
 
     }
 }

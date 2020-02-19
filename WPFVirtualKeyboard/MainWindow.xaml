@@ -13,7 +13,8 @@
             <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
 
-        <TextBox Grid.Row="0" x:Name="tbInput" AcceptsTab="True"/>
+        <TextBox Grid.Row="0" x:Name="tbInput" 
+                 InputMethod.PreferredImeState="On" InputMethod.PreferredImeConversionMode="Native"/>
         <keyboard:VirtualKeyboardUI Grid.Row="1" x:Name="generalKeyboard" IsShow="True"/>
 
     </Grid>

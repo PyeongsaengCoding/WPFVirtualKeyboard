@@ -14,7 +14,8 @@ namespace WPFVirtualKeyboard
         public MainWindow()
         {
             InitializeComponent();
-            tbInput.Focus();            
+            tbInput.Focus();           
+
         }
     }
 

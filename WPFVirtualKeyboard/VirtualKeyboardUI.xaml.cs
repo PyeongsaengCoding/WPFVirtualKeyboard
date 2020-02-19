@@ -10,6 +10,8 @@ namespace WPFVirtualKeyboard
         public VirtualKeyboardUI()
         {
             InitializeComponent();
+
+            IsEnableHook = false;
         }
     }
 }
