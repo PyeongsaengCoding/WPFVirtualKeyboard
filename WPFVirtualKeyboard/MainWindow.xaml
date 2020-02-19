@@ -7,9 +7,9 @@
         xmlns:keyboard="clr-namespace:WPFVirtualKeyboard"
         mc:Ignorable="d"
         Title="Hangul Keyboard" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="myGridRow">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.2*"/>
             <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
 
