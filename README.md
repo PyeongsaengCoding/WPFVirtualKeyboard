@@ -1,4 +1,4 @@
-# WPF Virtual Keboard for Hangul(Korea)
+# WPF Virtual Keyboard for Hangul(Korea)
 
 ![](https://user-images.githubusercontent.com/24456683/73907408-838f2e00-48e9-11ea-8bbd-4ef278c765d6.gif)
 
